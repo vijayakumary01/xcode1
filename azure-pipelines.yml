@@ -30,18 +30,13 @@ steps:
   displayName: Build
   timeoutInMinutes: 15
   inputs:
-    actions: 'archive' # build, clean, test, analyze, and archive
-    scheme: $(SchemaName)
-    sdk: 'iphoneos'
+    actions: 'archive'
     configuration: 'Release'
-    xcWorkspacePath: $(WorkspacePath)
-    xcodeVersion: 'default'
-    packageApp: true
+    sdk: 'iphoneos'
+    xcWorkspacePath: '$(WorkspacePath)'
+    scheme: '$(SchemaName)'
+    xcodeVersion: '13'
+    packageApp: false
     signingOption: 'default'
-    provisioningProfileUuid: $(ProfileUUID)
-    exportMethod: $(ExportMethod)
-    exportOptions: 'plist'
-    exportOptionsPlist: $(ExportOptionsFileName)
-    archivePath: '$(Build.ArtifactStagingDirectory)/pack'
     args: '-xcconfig release.xcconfig'
 
