@@ -21,12 +21,7 @@ variables:
 steps:
 
 
-- task: CmdLine@2
-  displayName: Bump build number
-  timeoutInMinutes: 1
-  inputs:
-    script: |
-        ./scripts/az-set-build-no.sh $(SchemaName) # SchemaName matches the target.
+
 - task: CocoaPods@0
   timeoutInMinutes: 5
   inputs:
