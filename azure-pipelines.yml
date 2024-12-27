@@ -35,7 +35,6 @@ steps:
     sdk: 'iphoneos'
     xcWorkspacePath: '$(WorkspacePath)'
     scheme: '$(SchemaName)'
-    xcodeVersion: '13'
     packageApp: false
     signingOption: 'default'
     args: '-xcconfig release.xcconfig'
